@@ -123,5 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-test
-"""test"""
+'test'
