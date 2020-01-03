@@ -102,5 +102,6 @@ def articleSearch(request):
     searchTerm = request.GET.get('searchTerm')
     articles = Article.objects.filter(Q(title__icontains=searchTerm) |
                                       Q(content__icontains=searchTerm))
-    context = {'articles':articles} 
+    context = {'articles':articles, 'searchTerm':searchTerm} 
     return render(request, 'article/articleSearch.html', context)
+
